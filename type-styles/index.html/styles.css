@@ -1,0 +1,82 @@
+html {
+    font-family: 'Raleway', sans-serif;
+    margin: 20pt;
+}
+
+body {
+    margin: 20pt;
+}
+
+h1 {
+    font-size: 22pt; 
+    color: steelblue; 
+    text-align: center;
+    margin-bottom: 20pt;
+}
+
+p {
+    font-size: 12pt; 
+    color: steelblue;
+    text-align: center;
+    margin-bottom: 30pt;
+}
+
+h2 {
+    font-size: 20pt;
+    margin-bottom: 10pt;
+    text-align: center; 
+}
+
+.example {
+    color: steelblue;
+    text-align: center;
+}
+
+.weight-normal {
+    font-weight: normal;
+}
+
+.weight-bold {
+    font-weight: bold;
+}
+
+
+.style-normal {
+    font-style: normal;
+}
+
+.style-italic {
+    font-style: italic;
+}
+
+.spacing-normal {
+    letter-spacing: normal;
+}
+
+.spacing-wide {
+    letter-spacing: 0.1em;
+}
+
+.transform-none {
+    text-transform: none;
+}
+
+.transform-uppercase {
+    text-transform: uppercase;
+}
+
+.transform-capitalize {
+    text-transform: capitalize;
+}
+
+.decoration-none {
+    text-decoration: none;
+}
+
+.decoration-underline {
+    text-decoration: underline;
+}
+
+.decoration-line-through {
+    text-decoration: line-through;
+}
