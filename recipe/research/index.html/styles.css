@@ -1,0 +1,54 @@
+html {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Arial';
+    font-weight: 700;
+    font-size: 40pt;
+    line-height: 1.2;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Arial';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.2;
+    color: brown;
+}
+
+.recipe-title {
+    font-family: 'Arial';
+    font-size: 24px;
+    color: brown;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Arial';
+    font-size: 18px;
+    line-height: 1.6;
+    color: brown;
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+img {
+    width: 50px; 
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
