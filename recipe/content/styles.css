@@ -1,0 +1,50 @@
+/* General Body Styling */
+html {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 20pt;
+    text-align: center;
+    margin-left: 200pt;
+    margin-right: 200pt;
+    background-color: #FFEB3B; 
+}
+h1{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 40pt;
+    line-height: 40pt;
+}
+h2{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 40pt;
+    line-height: 40pt;
+}
+
+p1 {
+    font-family: 'Arial';
+    font-size: 18pt;
+    line-height: 1.6;
+    color: brown;
+    text-align: center;
+    margin-bottom: 20pt;
+}
+p2 {
+    font-family: 'Arial';
+    font-size: 18pt;
+    line-height: 1.6;
+    color: brown;
+    text-align: left;
+    margin-bottom: 20pt;
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin: 20pt auto;
+    border-radius: 10pt;
+}
+
+
