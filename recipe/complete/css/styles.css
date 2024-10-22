@@ -16,15 +16,14 @@ body {
 
 img {
     width: 100%;  
-    max-width: 500px;  
-    height: auto;
+    max-width: 100%;  
     margin: 20px auto;
     border-radius: 10pt;
 }
 
 h1 {
     font-family: "Dancing Script", cursive;
-    font-size: 2.5rem;  
+    font-size: 2.5rem;
     line-height: 1.2;
 }
 
@@ -36,7 +35,7 @@ h2 {
 
 .p1, .p2 {
     font-family: 'Arial';
-    font-size: 1rem; 
+    font-size: 1rem;
     line-height: 1.6;
     color: brown;
     text-align: left;
@@ -44,7 +43,7 @@ h2 {
     border: 1px solid black;
     padding: 10pt;
     border-radius: 5pt;
-    max-width: 100%;  
+    max-width: 100%; 
 }
 
 
@@ -54,11 +53,11 @@ h2 {
     }
 
     h1 {
-        font-size: 2rem; 
+        font-size: 1.75rem; 
     }
 
     h2 {
-        font-size: 1.75rem; 
+        font-size: 1.5rem;  
     }
 
     .p1, .p2 {
@@ -66,7 +65,7 @@ h2 {
     }
 
     body {
-        padding: 10px; 
+        padding: 10px;  
     }
 
     img {
@@ -74,13 +73,6 @@ h2 {
     }
 }
 
-@media (min-width: 1200px) {
-    body {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-    }
-}
 
 @media (min-width: 768px) and (max-width: 1200px) {
     body {
@@ -88,17 +80,18 @@ h2 {
     }
 
     h1 {
-        font-size: 2.25rem; 
+        font-size: 2.25rem;  
     }
 
     h2 {
-        font-size: 1.85rem;  
+        font-size: 1.85rem;
     }
 
     .p1, .p2 {
-        font-size: 0.95rem; 
+        font-size: 0.95rem;
     }
 }
+
 
 
 
