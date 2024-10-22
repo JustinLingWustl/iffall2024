@@ -9,28 +9,37 @@ html {
 }
 
 body {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box; 
 }
 
 img {
-    width: 100%;  
-    max-width: 100%;  
+    width: 100%;
+    height: auto;
     margin: 20px auto;
     border-radius: 10pt;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 h1 {
     font-family: "Dancing Script", cursive;
     font-size: 2.5rem;
     line-height: 1.2;
+    margin: 20px 0;
 }
 
 h2 {
     font-family: "Dancing Script", cursive;
     font-size: 2rem;
     line-height: 1.2;
+    margin: 20px 0;
 }
 
 .p1, .p2 {
@@ -39,13 +48,11 @@ h2 {
     line-height: 1.6;
     color: brown;
     text-align: left;
-    margin-bottom: 20pt;
-    border: 1px solid black;
-    padding: 10pt;
-    border-radius: 5pt;
-    max-width: 100%; 
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
 }
-
 
 @media (max-width: 600px) {
     html {
@@ -57,7 +64,7 @@ h2 {
     }
 
     h2 {
-        font-size: 1.5rem;  
+        font-size: 1.5rem;
     }
 
     .p1, .p2 {
@@ -69,10 +76,10 @@ h2 {
     }
 
     img {
-        max-width: 100%;  
+        max-width: 100%;
+        height: auto;
     }
 }
-
 
 @media (min-width: 768px) and (max-width: 1200px) {
     body {
@@ -80,7 +87,7 @@ h2 {
     }
 
     h1 {
-        font-size: 2.25rem;  
+        font-size: 2.25rem;
     }
 
     h2 {
@@ -91,6 +98,7 @@ h2 {
         font-size: 0.95rem;
     }
 }
+
 
 
 
