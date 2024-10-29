@@ -1,0 +1,89 @@
+/* General styles for .positioned-element */
+.positioned-element {
+    width: 100px;
+    height: 100px;
+    background-color: gray; /* Default color */
+    margin-bottom: 20px; /* Add space after the square */
+  }
+  
+  /* Static Example */
+  .static-example .positioned-element {
+    background-color: green;
+    left: 100px; /* No effect since position is static */
+  }
+  
+  /* Relative Example */
+  .relative-example .positioned-element {
+    background-color: lightblue;
+    position: relative;
+    left: 100px;
+    top: 50px;
+    z-index: -1; /* Move behind the text */
+  }
+  
+  /* Absolute Example */
+  /* Parent container */
+  .absolute-example {
+    position: relative; /* Positioning parent */
+  }
+  
+  /* Positioned element */
+  .absolute-example .positioned-element {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  /* Fixed Example */
+  .fixed-example .positioned-element {
+    background-color: purple;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensure it stays on top */
+  }
+  
+  /* Sticky Example */
+  .sticky-example .positioned-element {
+    background-color: orange;
+    position: sticky;
+    top: 50px;
+  }
+  
+  /* Additional styles for better presentation */
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    margin-top: 40px;
+  }
+  
+  section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  aside {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #ccc;
+    margin-top: 20px;
+  }
+  
+  .instructions {
+    background-color: #eef;
+    padding: 10px;
+    border: 1px dashed #99c;
+  }
+  
+  .instructions li {
+    margin-bottom: 10px;
+  }
+  
+  
