@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamagotchi</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-image: url('https://kawaiihoshi.com/wp-content/uploads/2023/08/tamagotchi-UNI-wallpaper-kawaii-hoshi.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            margin: 0;
+            font-family: 'Futura', sans-serif;
+            color: white;
+            position: relative; 
+        }
+
+   
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.15);
+            z-index: -1;
+        }
+     
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 200px;
+            background-color: #FFBF00;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+  
+        .option {
+            font-size: 1.75em;
+            color: white;
+            font-family: 'Baloo 2', cursive;
+            font-weight: 700;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            transition: color 0.3s;
+        }
+        
+        .option:hover {
+            color: purple;
+        }
+
+
+        h1 {
+            font-size: 5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 120px;
+            text-align: center;
+            font-family: 'Baloo 2', cursive;
+            font-weight: 700;
+            animation: titleColorChange 3s infinite;
+        }
+
+  
+        @keyframes titleColorChange {
+            0% { color: white; }
+            50% { color: purple; }
+            80% { color: yellow; }
+        }
+
+        
+        .emoji-image {
+            display: block;
+            margin: 40px auto;
+            max-width: 300px;
+            width: 100%;
+            animation: emojiPulse 2s infinite;
+        }
+
+
+        @keyframes emojiPulse {
+            0% { transform: scale(0.95); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(0.95); }
+        }
+
+
+        .main-text {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: 'Baloo 2', cursive;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+      
+        .main-text p {
+            margin-bottom: 20px;
+        }
+
+   
+        .content {
+            height: 500px;
+        }
+
+   
+        .source {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1em;
+            color: white;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        .source a {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+
+        .source a:hover {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="options">
+        <a href="categories.html" class="option">Categories</a>
+        <a href="marketing.html" class="option">Marketing</a>
+        <a href="history.html" class="option">History</a>
+    </div>
+
+ 
+    <h1>TAMAGOTCHI</h1>
+
+
+    <img src="https://static.wikia.nocookie.net/tamagotchi/images/8/8d/Tamagotchi_blue.png/revision/latest?cb=20110906021758" alt="Tamagotchi Emoji" class="emoji-image">
+    
+
+    <div class="main-text">
+        <p>"Tamagotchi characters are life forms that live on "Tamagotchi Planet", a planet far away from Earth. After their discovery on Earth in 1996, millions of Tamagotchi characters have been raised by people across the world.</p>
+    
+        <p>Eating great food, and playing many games... The Tamagotchi characters have grown to love the Earthlings who fill them with so much excitement.</p>
+        
+        <p>Although Tamagotchi characters are a bit selfish at times and sometimes accidentally poop in the room, the days spent with Tamagotchi characters are full of smiles.</p>
+        
+        <p>Strange and quirky, yet adorable... They will need your care, but will "grow" to be a big part of your everyday life.</p>
+        
+        <p>That is Tamagotchi."</p>
+
+        <p class="source">@2024 - view <a href="https://www.bandai.com" target="_blank" rel="noopener noreferrer">source</a></p>
+    </div>
+
+    <div class="content"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

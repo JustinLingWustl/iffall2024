@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories - Tamagotchi</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0; 
+            font-family: 'Baloo 2', cursive; 
+            color: black; 
+            background-image: url('https://img.freepik.com/vettori-premium/modello-di-televisori-retro-e-tamagotchi_24911-8585.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center center;
+            background-attachment: fixed; 
+        }
+
+ 
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 224, 0.9); 
+            pointer-events: none; 
+            z-index: 0;
+        }
+
+      
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1; 
+        }
+
+       
+        .back-button a {
+            text-decoration: none; 
+            color: black;
+            border: 2px solid black; 
+            padding: 10px 15px; 
+            border-radius: 5px;
+            background-color: rgba(255, 255, 224, 0.9);
+            font-size: 1.1em; 
+            font-weight: bold; 
+            transition: color 0.3s, border-color 0.3s; 
+        }
+
+     
+        .back-button a:hover {
+            color: purple; 
+            border-color: purple; 
+        }
+
+       
+        h1 {
+            text-align: center; 
+            margin-top: 80px; 
+            font-size: 2.5em; 
+            font-weight: bold; 
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .images-section {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 40px; 
+            margin-top: 40px; 
+            padding: 0 20px 40px 20px; 
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .category {
+            max-width: 300px; 
+            text-align: center; 
+        }
+
+        .category img {
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border: 5px solid black; 
+            border-radius: 15px; 
+            margin-bottom: 10px; 
+            transition: border-color 0.3s; 
+        }
+
+        .category img:hover {
+            border-color: purple; 
+        }
+
+        .category p.title {
+            margin-bottom: 15px;
+            font-size: 1.2em; 
+            color: black; 
+            transition: color 0.3s; 
+            text-align: center; 
+        }
+
+       
+        .category p.title:hover {
+            color: purple; 
+        }
+
+      
+        .category p.title.dreamy-angel-title {
+            font-size: 1.1em; 
+        }
+
+       
+        .category:not(:last-child) {
+            border-bottom: 1px solid #ccc; 
+            padding-bottom: 20px; 
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="back-button">
+        <a href="index.html">Back</a>
+    </div>
+
+   
+    <h1>Categories</h1>
+
+   
+    <div class="images-section">
+       
+        <div class="category">
+            <p class="title"><strong>Original Tamagotchi - Lovely Angel</strong></p>
+            <img src="https://www.bandai.com/media/catalog/product/4/2/42989_lovely-angel_p3__00.jpg" alt="Tamagotchi Lovely Angel">
+            <p>
+                "The Original digital pet you love with a Lovely Angel shell design and three-dimensional wings! Feed it, clean up after it, and praise it. You can also play the Shooting Star mini-game!"
+            </p>
+        </div>
+
+      
+        <div class="category">
+            <p class="title dreamy-angel-title"><strong>Original Tamagotchi - Dreamy Angel</strong></p>
+            <img src="https://www.bandai.com/media/catalog/product/4/2/42994_dreamy-angel_p3__00.jpg" alt="Tamagotchi Dreamy Angel">
+            <p>
+                "Comes with Angel programming. The device will start with Obaketchi Angel (a ghost character). How you take care of it will decide which of the 5 adult Tamagotchi Angel characters you get."
+            </p>
+        </div>
+
+      
+        <div class="category">
+            <p class="title"><strong>Tamagotchi On - Fairy Pink</strong></p>
+            <img src="https://m.media-amazon.com/images/I/514qMAjW8YL.jpg" alt="Tamagotchi On - Fairy Pink">
+            <p>
+                "Experience the magical world of Tamagotchi On with the Fairy Pink edition! Raise your Tamagotchi character, explore new lands, and connect with friends. The possibilities are endless in this interactive virtual pet adventure."
+            </p>
+        </div>
+
+       
+        <div class="category">
+            <p class="title"><strong>Tamagotchi Smart - White</strong></p>
+            <img src="https://tools.toywiz.com/_images/_webp/_products/lg/sep248087.webp" alt="Tamagotchi Smart - White">
+            <p>
+                "Introducing the Tamagotchi Smart, the latest evolution in virtual pets! Wear it like a watch, interact through touch and voice, and discover a new way to care for your Tamagotchi. Stay connected and nurture your digital companion on the go."
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
