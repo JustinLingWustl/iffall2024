@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collection - Tamagotchi</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Baloo 2', cursive;
+            color: black;
+            background-image: url('https://img.freepik.com/vettori-premium/modello-di-televisori-retro-e-tamagotchi_24911-8585.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            padding-bottom: 40px;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 224, 0.9);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        .back-btn a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 224, 0.9);
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+        }
+
+        .back-btn a:hover {
+            color: purple;
+            border-color: purple;
+            background-color: rgba(255, 255, 224, 1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 48px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            animation: colorChange 2s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: white; }
+            50% { color: purple; }
+            100% { color: white; }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid-item {
+            position: relative;
+            border: 6px solid black;
+            border-radius: 10px;
+            height: 300px;
+            overflow: hidden;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            background-color: rgba(255, 255, 224, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .grid-item:hover {
+            border-color: purple;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .grid-item:hover img {
+            opacity: 0.3;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: transparent;
+            transition: color 0.3s;
+            width: 90%;
+        }
+
+        .grid-item:hover .overlay {
+            color: purple;
+        }
+
+        .overlay .name {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .overlay .description {
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1000px) {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-item {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            .grid-item {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-btn">
+        <a href="index.html">Back</a>
+    </div>
+
+    <h1>My Tamagotchi Collection</h1>
+
+    <div class="content">
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1071_1.jpg?v=1702926736&width=3000" alt="TamaSpark">
+            <div class="overlay">
+                <p class="name">TamaSpark</p>
+                <p class="description">"TamaSpark ignites every adventure with boundless energy and a fiery spirit."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1151_3.jpg?v=1701797604&width=2048" alt="FlameBurst">
+            <div class="overlay">
+                <p class="name">FlameBurst</p>
+                <p class="description">"FlameBurst shines brightly, lighting up even the darkest of days with warmth."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1157_3.jpg?v=1715115042&width=3000" alt="GlitterGlimmer">
+            <div class="overlay">
+                <p class="name">GlitterGlimmer</p>
+                <p class="description">"GlitterGlimmer sparkles with joy, spreading happiness wherever they go."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1077_1.jpg?v=1702926755&width=3000" alt="RedRadiance">
+            <div class="overlay">
+                <p class="name">RedRadiance</p>
+                <p class="description">"RedRadiance radiates confidence and courage, always leading the way."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1133_3.jpg?v=1698958854&width=3000" alt="LuckyLuna">
+            <div class="overlay">
+                <p class="name">LuckyLuna</p>
+                <p class="description">"LuckyLuna brings good fortune and serenity, making every moment magical."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/RedGlitter_1.jpg?v=1693926421&width=3000" alt="RubyShine">
+            <div class="overlay">
+                <p class="name">RubyShine</p>
+                <p class="description">"RubyShine dazzles with their vibrant personality and dazzling charm."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1109_1.jpg?v=1702926779&width=2048" alt="SparkleStar">
+            <div class="overlay">
+                <p class="name">SparkleStar</p>
+                <p class="description">"SparkleStar twinkles with creativity, turning dreams into reality."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1151_3.jpg?v=1701797604&width=2048" alt="ShadowFlame">
+            <div class="overlay">
+                <p class="name">ShadowFlame</p>
+                <p class="description">"ShadowFlame blends mystery with passion, adding depth to every adventure."</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://retrospekt.com/cdn/shop/files/LF-1136_3.jpg?v=1698958711&width=3000" alt="LunaGlow">
+            <div class="overlay">
+                <p class="name">LunaGlow</p>
+                <p class="description">"LunaGlow illuminates the night with a gentle, calming presence."</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
