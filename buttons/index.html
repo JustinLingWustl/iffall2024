@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Buttons &mdash; Justin Ling</title>
+
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+
+
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <style>
+
+            body {
+                color: #333;
+                font-family: 'Open Sans', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            main {
+                margin: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px; 
+            }
+
+            h1 {
+                font-size: 30px;
+                margin-bottom: 40px;
+                width: 100%;
+            }
+
+            .button_group {
+                display: flex;
+                flex-direction: column;
+                gap: 20px; 
+                width: 300px;
+                box-sizing: border-box;
+            }
+
+            .button_container {
+                border: 1px solid #ddd;
+                padding: 20px;
+                width: 300px;
+                height: 300px;
+                box-sizing: border-box;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            a#btn_spotify {
+                display: inline-block;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 25px;
+                margin: auto;
+                padding: 10px 40px 0 40px;
+                background-color: #2ebd59;
+                border: 2px solid #2ebd59;
+                color: #fff;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.5s;
+            }
+
+            a#btn_spotify:hover {
+                background-color: #fff;
+                border: 2px solid #000;
+                color: #000;
+            }
+
+
+            a#btn_amazon {
+                display: block;
+                width: 100px;
+                height: 100px;
+                box-sizing: border-box;
+                border-radius: 50px;
+                margin: auto;
+                padding-top: 8px;
+                background-color: #232f3e;
+                color: #fff;
+                text-align: center;
+                font-size: 60px;
+                transition: all 0.2s;
+            }
+
+            a#btn_amazon:hover {
+                background-color: #fc9a18;
+            }
+
+            a#btn_twitter {
+                display: inline-block;
+                height: 40px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                margin: auto;
+                padding: 10px 30px 0 30px;
+                background-color: #56cdf1;
+                color: #fff;
+                font-size: 18px;
+                font-family: 'Arial', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: background 0.3s;
+            }
+
+            a#btn_twitter:hover {
+                background: linear-gradient(135deg, rgba(46,191,236,1) 0%, rgba(40,165,203,1) 100%);
+                color: #000;
+            }
+
+        
+            a#btn_indiegogo {
+                display: inline-block;
+                position: relative;
+                padding: 8px 16px;
+                background-color: #fff;
+                color: #eb1478;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 30px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: -2px;
+                transition: all 0.2s;
+            }
+
+            a#btn_indiegogo:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                z-index: 1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: #eb1478;
+                transition: all 0.5s;
+            }
+
+            a#btn_indiegogo:hover {
+                color: #fff;
+            }
+
+            a#btn_indiegogo:hover:before {
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            a#btn_indiegogo span {
+                position: relative;
+                z-index: 10;
+            }
+			
+    
+            a#btn_facebook {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 25px;
+                padding: 10px 20px;
+                background-color: #3b5998;
+                border: 2px solid #3b5998;
+                color: #fff;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.5s;
+            }
+
+            a#btn_facebook:hover {
+                background-color: #fff;
+                border: 2px solid #000;
+                color: #000;
+            }
+
+            a#btn_facebook i {
+                margin-right: 10px; 
+            }
+
+            a#btn_linkedin {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 25px;
+                padding: 10px 20px;
+                background-color: #0077b5; 
+                border: 2px solid #0077b5;
+                color: #fff;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.5s;
+            }
+
+            a#btn_linkedin:hover {
+                background-color: #fff;
+                border: 2px solid #000;
+                color: #000;
+                transform: scale(1.1); 
+            }
+
+            a#btn_linkedin i {
+                margin-right: 10px; 
+            }
+
+
+            a#btn_instagram {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                box-sizing: border-box;
+                border-radius: 50px;
+                padding: 20px 40px; 
+                background-color: #E1306C; 
+                border: 2px solid #E1306C;
+                color: #fff;
+                font-size: 40px; 
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.5s;
+                overflow: hidden; 
+                width: 100px; 
+            }
+
+            a#btn_instagram i {
+                font-size: 72px; 
+                transition: transform 0.3s ease; 
+            }
+
+            a#btn_instagram:hover i {
+                transform: scale(1.5); 
+            }
+
+    
+            a#btn_cocacola {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 80px; 
+                width: 80px; 
+                box-sizing: border-box;
+                border-radius: 50%; 
+                background-color: #E41B17; 
+                border: 2px solid #E41B17;
+                color: #fff;
+                font-size: 16px; 
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.3s, background-color 0.3s, transform 0.3s;
+                overflow: hidden; 
+                text-align: center; 
+                padding: 0; 
+            }
+
+            a#btn_cocacola:hover {
+                background-color: #fff;
+                border: 2px solid #000;
+                color: #000;
+                transform: scale(1.1); 
+                font-size: 18px; 
+            }
+
+
+            a#btn_nike {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 80px; 
+                width: 80px;
+                box-sizing: border-box;
+                border-radius: 50%; 
+                background-color: #111;
+                border: 2px solid #111;
+                color: #fff;
+                text-decoration: none;
+                transition: background-color 0.3s, border-color 0.3s;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 18px; 
+            }
+
+            a#btn_nike:hover {
+                background-color: #fff;
+                border: 2px solid #000; 
+            }
+
+            a#btn_nike span {
+                display: inline-block;
+                transition: transform 0.6s ease-in-out, letter-spacing 0.3s ease-in-out; 
+                letter-spacing: 0px; 
+            }
+
+            a#btn_nike:hover span {
+                transform: rotate(360deg); 
+                letter-spacing: 2px; 
+                color: #000; 
+            }
+
+            a#btn_nike:focus {
+                outline: 3px solid #000;
+                outline-offset: 2px;
+            }
+
+
+            a#btn_tesla {
+                display: inline-block;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                margin: auto;
+                padding: 10px 30px 0 30px;
+                background-color: transparent; 
+                border: none;
+                color: #000; 
+                font-size: 21px;
+                font-family: 'Arial', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease; 
+                letter-spacing: 0px; 
+                position: relative; 
+            }
+
+            a#btn_tesla:hover {
+                color: #fff; 
+                background-color: #0000ff; 
+                padding: 10px 35px 0 35px; 
+                font-size: 26px; 
+                letter-spacing: 1px; 
+            }
+
+            a#btn_tesla:active {
+                padding: 10px 40px 0 40px; 
+                font-size: 27px; 
+                letter-spacing: 2px; 
+                transform: scale(0.98);
+            }
+
+            a#btn_tesla:focus {
+                outline: 3px solid #0000ff; 
+                outline-offset: 2px;
+            }
+			
+
+            a#btn_samsung {
+                display: inline-block;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                margin: auto;
+                padding: 10px 30px 0 30px;
+                background-color: transparent; 
+                border: 2px solid #000; 
+                color: #000; 
+                font-size: 21px; 
+                font-family: 'Arial', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease, letter-spacing 0.3s ease; 
+                letter-spacing: 0px; 
+            }
+
+            a#btn_samsung:hover {
+                color: #fff;
+                background-color: #000; 
+                padding: 10px 40px 0 40px; 
+                letter-spacing: 1px; 
+            }
+
+            a#btn_samsung:active {
+                padding: 10px 50px 0 50px; 
+                letter-spacing: 2px; 
+                transform: scale(0.98);
+            }
+
+            a#btn_samsung:focus {
+                outline: 3px solid #000;
+                outline-offset: 2px;
+            }
+
+
+            a#btn_apple {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                box-sizing: border-box;
+                border-radius: 50px;
+                margin: auto;
+                padding: 20px;
+                background-color: #000; 
+                border: 2px solid #000; 
+                color: #fff; 
+                font-size: 40px; 
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                position: relative; 
+                overflow: hidden; 
+            }
+
+            a#btn_apple:hover {
+                background-color: #fff; 
+                color: #000;
+            }
+
+            a#btn_apple:hover::after {
+                content: "APPLE";
+                position: absolute;
+                bottom: -20px; 
+                left: 50%;
+                transform: translateX(-50%);
+                color: #000;
+                font-size: 16px;
+                transition: all 0.3s ease;
+            }
+
+            a#btn_apple::after {
+                content: "";
+                position: absolute;
+                bottom: -20px; 
+                left: 50%;
+                transform: translateX(-50%);
+                color: #000;
+                font-size: 16px;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            a#btn_apple:hover::after {
+                opacity: 1; 
+                bottom: 10px; 
+            }
+
+            a#btn_apple:focus {
+                outline: 3px solid #000;
+                outline-offset: 2px;
+            }
+
+
+            a#btn_moo {
+                display: inline-block;
+                height: 50px;
+                box-sizing: border-box;
+                border-radius: 25px;
+                margin: auto;
+                padding: 10px 40px 0 40px;
+                background-color: #28a745; 
+                border: 2px solid #28a745; 
+                color: #fff;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            a#btn_moo:hover {
+                background-color: #ffc107; 
+                color: #000; 
+            }
+
+            a#btn_moo:focus {
+                outline: 3px solid #ffc107; 
+                outline-offset: 2px;
+            }
+
+    
+            a#btn_ibm {
+                display: inline-block;
+                height: 60px; 
+                box-sizing: border-box;
+                border-radius: 30px; 
+                margin: auto;
+                padding: 15px 50px 0 50px; 
+                background-color: #0071C5; 
+                border: 2px solid #0071C5; 
+                color: #fff; 
+                font-size: 24px; 
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                text-decoration: none;
+                transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+            }
+
+            a#btn_ibm:hover {
+                background-color: #00509E; 
+                transform: scale(1.1); 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+            }
+
+            a#btn_ibm:focus {
+                outline: 3px solid #00509E; 
+                outline-offset: 2px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <main>
+
+            <h1>Button Styling &mdash; Justin Ling</h1>
+            
+
+            <div class="button_group">
+                <div class="button_container">
+                    <a href="http://www.spotify.com" target="_blank" id="btn_spotify">Spotify</a>
+                </div>
+                
+                <div class="button_container">
+                    <a href="https://www.tesla.com/" target="_blank" id="btn_tesla" aria-label="Visit Tesla's official website">TESLA</a>
+                </div>
+            </div>
+
+            <div class="button_group">
+                <div class="button_container">
+                    <a href="http://www.amazon.com" target="_blank" id="btn_amazon"><i class="fa fa-amazon"></i></a>
+                </div>
+                
+                <div class="button_container">
+                    <a href="https://www.instagram.com/" target="_blank" id="btn_instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+
+            </div>
+			<div class="button_group">
+				<div class="button_container">
+					<a href="http://www.twitter.com" target="_blank" id="btn_twitter">Twitter</a>
+				</div>
+			
+				<div class="button_container">
+					<a href="https://www.coca-cola.com/" target="_blank" id="btn_cocacola" aria-label="Visit Coca-Cola's official website">Coca-Cola</a>
+				</div>
+			</div>
+			
+
+            <div class="button_group">
+    <div class="button_container">
+        <a href="http://www.indiegogo.com" target="_blank" id="btn_indiegogo"><span>Indiegogo</span></a>
+    </div>
+
+    <div class="button_container">
+        <a href="https://www.nike.com/" target="_blank" id="btn_nike" aria-label="Visit Nike's official website">
+            <span>NIKE</span>
+        </a>
+    </div>
+</div>
+
+
+ 
+            <div class="button_container">
+                <a href="https://www.ibm.com/" target="_blank" id="btn_ibm" aria-label="Visit IBM's official website">IBM</a>
+            </div>
+
+          
+            <div class="button_container">
+                <a href="http://www.moosite.com" target="_blank" id="btn_moo" aria-label="MOO Button">MOO</a>
+            </div>
+
+
+            <div class="button_container">
+                <a href="https://www.facebook.com/" target="_blank" id="btn_facebook"><i class="fa fa-facebook"></i> Facebook</a>
+            </div>
+
+            <div class="button_container">
+                <a href="https://www.linkedin.com/" target="_blank" id="btn_linkedin"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            </div>
+
+            <div class="button_container">
+                <a href="http://www.apple.com/" target="_blank" id="btn_apple" aria-label="Visit Apple's official website">
+                    <i class="fa fa-apple"></i>
+                </a>
+            </div>
+
+            <div class="button_container">
+                <a href="https://www.samsung.com/us/" target="_blank" id="btn_samsung" aria-label="Visit Samsung's official website">Samsung</a>
+            </div>
+            
+           
+
+            
+
+        </main>	
+
+    </body>
+</html>
